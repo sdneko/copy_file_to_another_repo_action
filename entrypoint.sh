@@ -39,8 +39,10 @@ echo "Copying contents to git repo"
 mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER
 if [ -z "$INPUT_USE_RSYNC" ]
 then
+if [ -d "$DEST_COPY/network" ]; then
+  rm -R "$DEST_COPY/network"
+fi
   rm -R "$DEST_COPY/artifacts"
-  rm -R "$DEST_COPY/networking"
   rm -R "$DEST_COPY/Sources"
   rm -R "$DEST_COPY/Package.swift"
   cp -R "$INPUT_SOURCE_FILE" "$DEST_COPY"
