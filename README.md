@@ -1,5 +1,5 @@
-# copy_file_to_another_repo_action
-This GitHub Action copies a file from the current repository to a location in another repository
+# copy_swift_package_to_another_repo_action
+This GitHub Action copies a swift package from the current repository to a location in another repository
 
 # Example Workflow
     name: Push File
@@ -14,7 +14,7 @@ This GitHub Action copies a file from the current repository to a location in an
           uses: actions/checkout@v2
 
         - name: Pushes test file
-          uses: dmnemec/copy_file_to_another_repo_action@main
+          uses: sdneko/copy_swift_package_to_another_repo_action@main
           env:
             API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
           with:
